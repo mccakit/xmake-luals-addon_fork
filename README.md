@@ -8,7 +8,7 @@ This is the official lua language server addon for xmake, A cross-platform build
 
 ## Installation
 
-For [Zed Editor](https://zed.dev/):
+For [Zed Editor](https://zed.dev/) in Windows:
 
 - install [Scoop](https://scoop.sh/)
 ```bash
