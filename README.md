@@ -75,6 +75,7 @@ xmake create -P "hello"
     }
 }
 '@ | Out-File -Encoding utf8 .luarc.json
+```
 
 
 
