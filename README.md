@@ -8,44 +8,39 @@ This is the official lua language server addon for xmake, A cross-platform build
 
 ## Installation
 
-For [Zed Editor](https://zed.dev/) in Windows:
+For [Zed Editor](https://zed.dev/):
 
-- install [Scoop](https://scoop.sh/)
+- Install [Scoop](https://scoop.sh/)
 ```bash
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
-- install [Lua](https://www.lua.org/)
-```bash
-scoop install main/lua
-```
-
-- install [Lua Language Server](https://luals.github.io/)
-```bash
-scoop install main/lua-language-server
-```
-- clone [LLS-Addons](https://github.com/LuaLS/LLS-Addons)
-```bash
-git clone --recurse-submodules https://github.com/LuaLS/LLS-Addons.git
-```
-
-- clone [xmake-luals-addon](https://github.com/xmake-io/xmake-luals-addon) and copy it to LLS-Addons/addons
-```bash
-git clone --recurse-submodules https://github.com/LuaLS/LLS-Addons.git
-```
-
-- Install Zed Editor
+- Install [Zed Editor](https://zed.dev/)
 ```bash
 scoop install extras/zed
 ```
 
-- Create a project in the directory of your choice
+- Install [Lua](https://www.lua.org/)
+```bash
+scoop install main/lua
+```
+
+- Install [Lua Language Server](https://luals.github.io/)
+```bash
+scoop install main/lua-language-server
+```
+- Clone [LLS-Addons](https://github.com/LuaLS/LLS-Addons) and initialize xmake submodule
+```bash
+git clone https://github.com/LuaLS/LLS-Addons.git; Set-Location LLS-Addons; git submodule update --init addons/xmake/module
+```
+
+- Create an xmake project in the directory of your choice
 ```bash
 xmake create -P "hello"
 ```
 
-- Open the xmake project folder you created inside Zed Editor, then press Ctrl + Shift + P and type 'Open Project Settings', inside there point to the lua language server, example provided below
+- Open the project folder inside Zed Editor, then create a project settings file by pressing Ctrl + Shift + P and typing 'Open Project Settings', inside there point to the lua language server, by giving its binary directory
 ```bash
 {
     "lsp": {
@@ -62,7 +57,7 @@ xmake create -P "hello"
     }
 }
 ```
-- Create .luarc.json file with these settings, point to your LLS-Addons directory and the library folder of the xmake-luals-addon
+- Create .luarc.json file by running this command at the project directory, this file must point to your addons directory and the library folder of the xmake addon. Also disable the runtime builtin os module from showing up in the lsp.
 ```bash
 @'
 {
