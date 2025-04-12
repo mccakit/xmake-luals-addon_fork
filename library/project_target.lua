@@ -751,7 +751,7 @@ function add_includedirs(dir, ...) end
 ---[Open in browser](https://xmake.io/#/manual/project_target?id=targetadd_includedirs)
 ---
 ---@param dir string Include directory
----@param access AccessSpecifier Access specifier
+---@param access table Access specifier
 ---@return nil
 function add_includedirs(dir, access) end
 
