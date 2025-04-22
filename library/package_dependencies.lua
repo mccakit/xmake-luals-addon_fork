@@ -292,3 +292,11 @@ function on_test(func) end
 ---@param func PackageComponentHook Function to run for component
 ---@return nil
 function on_componment(name, func) end
+
+---
+---Terminate package configuration
+---
+---[Open in browser](https://xmake.io/#/manual/package_dependencies?id=package)
+---
+---@return nil
+function package_end(name) end
