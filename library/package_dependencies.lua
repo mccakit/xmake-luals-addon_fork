@@ -300,3 +300,13 @@ function on_componment(name, func) end
 ---
 ---@return nil
 function package_end(name) end
+
+
+---
+---Set the source directory for a package
+---
+---[Open in browser](https://xmake.io/#/package/local_3rd_source_library)
+---
+---@param path string
+---@return nil
+function set_sourcedir(path) end
