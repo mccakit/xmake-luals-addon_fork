@@ -299,7 +299,7 @@ function on_componment(name, func) end
 ---[Open in browser](https://xmake.io/#/manual/package_dependencies?id=package)
 ---
 ---@return nil
-function package_end(name) end
+function package_end() end
 
 
 ---

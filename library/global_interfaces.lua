@@ -186,15 +186,15 @@ function set_allowedarchs(arch, ...) end
 ---@return nil
 function set_allowedmodes(mode, ...) end
 
----@class Extension
-Extension = {}
+---@class Tool
+Tool = {}
 
 ---Import is mainly used to import xmake's extension class library and some custom class library modules
 ---
 ---[Open in browser](https://xmake.io/#/manual/builtin_modules?id=import)
 ---
 ---@param extension string
----@return Extension
+---@return Tool
 function import(extension) end
 
 ---Install is used for consuming third party packages
@@ -204,4 +204,4 @@ function import(extension) end
 ---@param package table
 ---@param config table
 ---@return nil
-function Extension.install(package, config) end
+function Tool.install(package, config) end
