@@ -194,12 +194,3 @@ function set_allowedmodes(mode, ...) end
 ---@param extension ExtensionModuleAlias
 ---@return ExtensionModule
 function import(extension) end
-
----Install is used for consuming third party packages
----
----[Open in browser](https://xmake.io/#/manual/package_dependencies?id=compilation-tools)
----
----@param package table
----@param config table
----@return nil
-function ExtensionModule.install(package, configs) end

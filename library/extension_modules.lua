@@ -37,3 +37,12 @@ xmake = {}
 ---| '"package.tools.nmake"'     #NMake toolchain
 ---| '"package.tools.scons"'     #Scons toolchain
 ---| '"package.tools.xmake"'     #XMake toolchain
+
+---Install is used for consuming third party packages
+---
+---[Open in browser](https://xmake.io/#/manual/package_dependencies?id=compilation-tools)
+---
+---@param package table
+---@param config table
+---@return nil
+function ExtensionModule.install(package, configs) end
