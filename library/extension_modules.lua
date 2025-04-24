@@ -1,6 +1,5 @@
 ---@class ExtensionModule
 ExtensionModule = {}
---Package Tools Extension Modules
 ---@class ExtensionModule
 autoconf = {}
 ---@class ExtensionModule
@@ -25,8 +24,6 @@ nmake = {}
 scons = {}
 ---@class ExtensionModule
 xmake = {}
---Aliases can be overriden but I have no clue how to implement a hierarchy
---This is the alias for Package Tools
 ---@alias ExtensionModuleAlias
 ---| '"package.tools.autoconf"'  #Autoconf toolchain
 ---| '"package.tools.bazel"'     #Bazel toolchain
