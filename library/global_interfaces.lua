@@ -185,3 +185,21 @@ function set_allowedarchs(arch, ...) end
 ---@param ... string Allowed modes
 ---@return nil
 function set_allowedmodes(mode, ...) end
+
+---
+---Import is mainly used to import xmake's extension class library and some custom class library modules
+---
+---[Open in browser](https://xmake.io/#/manual/builtin_modules?id=import)
+---
+---@param extension ExtensionModuleAlias
+---@return ExtensionModule
+function import(extension) end
+
+---Install is used for consuming third party packages
+---
+---[Open in browser](https://xmake.io/#/manual/package_dependencies?id=compilation-tools)
+---
+---@param package table
+---@param config table
+---@return nil
+function ExtensionModule.install(package, config) end
