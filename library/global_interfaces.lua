@@ -202,4 +202,4 @@ function import(extension) end
 ---@param package table
 ---@param config table
 ---@return nil
-function ExtensionModule.install(package, config) end
+function ExtensionModule.install(package, configs) end
