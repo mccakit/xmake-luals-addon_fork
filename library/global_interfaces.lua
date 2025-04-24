@@ -186,22 +186,60 @@ function set_allowedarchs(arch, ...) end
 ---@return nil
 function set_allowedmodes(mode, ...) end
 
----@class Tool
-Tool = {}
+---@class CompilationTool
+CompilationTool = {}
+---@class CompilationTool
+autoconf = {}
+---@class CompilationTool
+bazel = {}
+---@class CompilationTool
+cmake = {}
+---@class CompilationTool
+gn = {}
+---@class CompilationTool
+jom = {}
+---@class CompilationTool
+make = {}
+---@class CompilationTool
+meson = {}
+---@class CompilationTool
+msbuild = {}
+---@class CompilationTool
+ninja = {}
+---@class CompilationTool
+nmake = {}
+---@class CompilationTool
+scons = {}
+---@class CompilationTool
+xmake = {}
 
+---@alias XmakeExtension
+---| '"package.tools.autoconf"'  #Autoconf toolchain
+---| '"package.tools.bazel"'     #Bazel toolchain
+---| '"package.tools.cmake"'     #CMake toolchain
+---| '"package.tools.gn"'        #GN toolchain
+---| '"package.tools.jom"'       #JOM toolchain
+---| '"package.tools.make"'      #Make toolchain
+---| '"package.tools.meson"'     #Meson toolchain
+---| '"package.tools.msbuild"'   #MSBuild toolchain
+---| '"package.tools.ninja"'     #Ninja toolchain
+---| '"package.tools.nmake"'     #NMake toolchain
+---| '"package.tools.scons"'     #Scons toolchain
+---| '"package.tools.xmake"'     #XMake toolchain
+---
 ---Import is mainly used to import xmake's extension class library and some custom class library modules
 ---
 ---[Open in browser](https://xmake.io/#/manual/builtin_modules?id=import)
 ---
----@param extension string
----@return Tool
+---@param extension XmakeExtension
+---@return CompilationTool
 function import(extension) end
 
 ---Install is used for consuming third party packages
 ---
----[Open in browser](https://xmake.io/#/package/local_3rd_source_library)
+---[Open in browser](https://xmake.io/#/manual/package_dependencies?id=compilation-tools)
 ---
 ---@param package table
 ---@param config table
 ---@return nil
-function Tool.install(package, config) end
+function CompilationTool.install(package, config) end
