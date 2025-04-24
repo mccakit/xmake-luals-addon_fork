@@ -292,3 +292,21 @@ function on_test(func) end
 ---@param func PackageComponentHook Function to run for component
 ---@return nil
 function on_componment(name, func) end
+
+---
+---Terminate package configuration
+---
+---[Open in browser](https://xmake.io/#/manual/package_dependencies?id=package)
+---
+---@return nil
+function package_end() end
+
+
+---
+---Set the source directory for a package
+---
+---[Open in browser](https://xmake.io/#/package/local_3rd_source_library)
+---
+---@param path string
+---@return nil
+function set_sourcedir(path) end
