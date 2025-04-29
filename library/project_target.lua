@@ -1137,9 +1137,9 @@ function add_frameworkdirs(dir, ...) end
 ---[Open in browser](https://xmake.io/#/manual/project_target?id=targetset_toolset)
 ---
 ---@param type ToolType Tool type
----@param name string Tool name or location
+---@param ... string Tool name or location
 ---@return nil
-function set_toolset(type, name) end
+function set_toolset(type, ...) end
 
 ---
 ---**Scoped: target**
